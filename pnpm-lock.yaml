@@ -9,6 +9,7 @@ specifiers:
   '@mui/material': latest
   '@types/node': latest
   '@types/react': latest
+  clsx: ^2.0.0
   eslint: latest
   eslint-config-next: latest
   next: latest
@@ -23,6 +24,7 @@ dependencies:
   '@emotion/styled': 11.11.0_3p6jhguztwcfbjidczm7dwrg74
   '@mui/icons-material': 5.14.1_jn4c37tovqoejeodswdhxdarxi
   '@mui/material': 5.14.2_gxvejbxv5gxmmqvyu4i532duom
+  clsx: 2.0.0
   next: 13.4.12_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -920,6 +922,11 @@ packages:
 
   /clsx/1.2.1:
     resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: false
+
+  /clsx/2.0.0:
+    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
     engines: {node: '>=6'}
     dev: false
 
