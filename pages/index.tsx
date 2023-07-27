@@ -24,6 +24,9 @@ export default function Home() {
         <Link href="/about" color="secondary">
           Go to the about page
         </Link>
+        <Link href="/profile" color="secondary">
+          Go to the profile page
+        </Link>
         <ProTip />
         <Copyright />
       </Box>
