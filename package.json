@@ -20,16 +20,19 @@
     "@visx/mock-data": "^3.3.0",
     "@visx/scale": "^3.3.0",
     "@visx/shape": "^3.3.0",
+    "@vx/heatmap": "^0.0.199",
     "clsx": "^2.0.0",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
     "@types/node": "latest",
     "@types/react": "latest",
-    "eslint": "latest",
+    "eslint": "^8.46.0",
     "eslint-config-next": "latest",
+    "prettier": "^3.0.0",
     "typescript": "latest"
   }
 }

@@ -1,4 +1,4 @@
-type WorkoutType = 'leg' | 'press' | 'curl'
+export type WorkoutType = 'LEG' | 'PRESS' | 'CURL';
 
 export type Workout = {
     id: number;
