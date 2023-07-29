@@ -1,12 +1,14 @@
-import * as React from 'react';
-import { Avatar, Box, Button, Container, Divider, Grid, Icon, Paper, Typography } from '@mui/material';
 import { LocalFireDepartment, MonitorHeart, Person } from '@mui/icons-material';
+import { Box, Button, Container, Grid, Paper, Typography } from '@mui/material';
+import * as React from 'react';
+
+import { Feed } from '../src/components/Feed/Feed';
+import Example from '../src/components/Heatmap/Heatmap';
 import { UserDetails } from '../src/components/UserDetails/UserDetails';
 import { userList } from '../src/data/users';
-import { FeedItem } from '../src/components/Feed/FeedItem';
-import { Feed } from '../src/components/Feed/Feed';
-import { Workout } from '../src/types/workout';
 import { User } from '../src/types/user';
+import { Workout } from '../src/types/workout';
+
 const user: User = userList[0];
 const workouts: Workout[] = [
     // export type Workout = {
@@ -63,7 +65,7 @@ export default function Profile() {
             <Grid container spacing={{xs: 3, md: 5}}>
                 <Grid item xs={12}>
                     <Paper elevation={2} >
-                        <Box display='flex' flexDirection={'row'} alignItems={'center'} gap={1} p={2}>
+                        <Box display='flex' flexDirection="row" alignItems="center" gap={1} p={2}>
                             <Person />
                             <Typography variant="h6" component="h1">
                                 Profile
@@ -74,11 +76,15 @@ export default function Profile() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Paper elevation={2}>
-                        <Box display='flex' flexDirection={'row'} alignItems={'center'} gap={1} p={2}>
+                        <Box display='flex' flexDirection="row" alignItems="center" gap={1} p={2}>
                             <LocalFireDepartment />
                             <Typography variant="h6" component="h2">
                                 Heatmap
                             </Typography>
+                        </Box>
+                        <Example width={200} height={200} margin={{top: 0, bottom: 0, left: 0, right: 0}} />
+                        <Box sx={{display: 'flex', flexDirection:'column', alignItems: 'stretch',  gap: 1, p: 2}}>
+                            <Button href="./" variant="outlined">Detailed View</Button>
                         </Box>
                     </Paper>
                 </Grid>
@@ -92,7 +98,7 @@ export default function Profile() {
                         </Box>
                         <Feed workouts={workouts}/>
                         <Box sx={{display: 'flex', flexDirection:'column', alignItems: 'stretch',  gap: 1, p: 2}}>
-                            <Button href='./' variant={'outlined'}>All Activity</Button>
+                            <Button href='./' variant="outlined">All Activity</Button>
                         </Box>
                     </Paper>
                 </Grid>

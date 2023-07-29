@@ -1,2 +1,12 @@
 {
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "[typescript]": {
+    "typescript.preferences.importModuleSpecifier": "non-relative"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.rulers": [80],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

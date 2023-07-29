@@ -1,4 +1,3 @@
-// TODO: Create a more robust email type
 type AlphaNumericString = string
 type EmailAlias = string
 

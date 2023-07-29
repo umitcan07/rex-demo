@@ -17,6 +17,7 @@
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "@visx/group": "^3.3.0",
+    "@visx/heatmap": "^3.3.0",
     "@visx/mock-data": "^3.3.0",
     "@visx/scale": "^3.3.0",
     "@visx/shape": "^3.3.0",
@@ -31,8 +32,18 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "eslint": "^8.46.0",
-    "eslint-config-next": "latest",
     "prettier": "^3.0.0",
-    "typescript": "latest"
+    "typescript": "latest",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "eslint-config-next": "^13.4.8"
   }
 }
