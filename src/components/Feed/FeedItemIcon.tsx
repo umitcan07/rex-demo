@@ -1,7 +1,7 @@
-import { AirlineSeatFlat, FitnessCenter, SportsGymnastics } from "@mui/icons-material";
+import { AirlineSeatFlat, FitnessCenter, SportsGymnastics } from '@mui/icons-material';
 
-import { WorkoutType } from "../../types/workout";
-import { notReachable } from "../../utils";
+import { WorkoutType } from '../../types/workout';
+import { notReachable } from '../../utils';
 
 
 type FeedItemIconProps = {

@@ -1,6 +1,5 @@
-import { WorkoutType } from "../types/workout";
-
-import { Color } from "../types";
+import { Color } from '../types';
+import { WorkoutType } from '../types/workout';
 
 export const workoutTypeToColors: Record<WorkoutType, [Color, Color]> = {
     LEG: ['#F6EFFF', '#9747FF'],
