@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 
-import { User, Workout } from '../types';
+import { Email, User, Workout } from '../types';
 
 export const createRandomUser = (id: number): User => {
 
