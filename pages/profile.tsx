@@ -1,66 +1,21 @@
 import { LocalFireDepartment, MonitorHeart, Person } from '@mui/icons-material';
 import { Box, Button, Container, Grid, Paper, Typography } from '@mui/material';
 import * as React from 'react';
+import { useContext } from 'react';
 
 import { Feed } from '../src/components/Feed/Feed';
 import Example from '../src/components/Heatmap/Heatmap';
 import { UserDetails } from '../src/components/UserDetails/UserDetails';
-import { userList } from '../src/data/users';
+import { UserContext } from '../src/contexts/UserContext';
+import { Workout } from '../src/types';
 import { User } from '../src/types/user';
-import { Workout } from '../src/types/workout';
 
-const user: User = userList[0];
-const workouts: Workout[] = [
-    // export type Workout = {
-// id: number;
-// type: 'LEG' | 'PRESS' | 'CURL';
-// date: Date;
-// duration: number;
-// caloriesBurned: number;
-// intensity: number;
-// description?: string;
-// }
-    {
-        id: 1,
-        type: 'LEG',
-        date: new Date(),
-        duration: 30,
-        caloriesBurned: 300,
-        intensity: 5,
-        description: 'Leg day'
-    },
-    {
-        id: 2,
-        type: 'PRESS',
-        date: new Date(),
-        duration: 30,
-        caloriesBurned: 321,
-        intensity: 5,
-        description: 'Chest day'
-    },
-    {
-        id: 3,
-        type: 'CURL',
-        date: new Date(),
-        duration: 30,
-        caloriesBurned: 432,
-        intensity: 5,
-        description: 'Arm day'
-    },  
-    {
-        id: 4,
-        type: 'LEG',
-        date: new Date(),
-        duration: 30,
-        caloriesBurned: 123,
-        intensity: 5,
-        description: 'Leg day'
-    }
-]
 
 export default function Profile() {
-
+    const user: User = useContext(UserContext);
+    const workouts = user.workouts as Workout[];
     return (
+        <UserContext.Provider value={user}>
         <Container sx={{pt: 8}} maxWidth="md">
             <Grid container spacing={{xs: 3, md: 5}}>
                 <Grid item xs={12}>
@@ -82,7 +37,7 @@ export default function Profile() {
                                 Heatmap
                             </Typography>
                         </Box>
-                        <Example width={200} height={200} margin={{top: 0, bottom: 0, left: 0, right: 0}} />
+                        <Example width={200} height={180} margin={{top: 0, bottom: 0, left: 0, right: 0}} />
                         <Box sx={{display: 'flex', flexDirection:'column', alignItems: 'stretch',  gap: 1, p: 2}}>
                             <Button href="./" variant="outlined">Detailed View</Button>
                         </Box>
@@ -90,7 +45,7 @@ export default function Profile() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Paper elevation={2}    >
-                        <Box sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: 1, p: 2, pb: 2}}>
+                        <Box sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 1, p: 2, pb: 2}}>
                             <MonitorHeart />
                             <Typography variant="h6" component="h2">
                                 Workout Feed
@@ -104,5 +59,6 @@ export default function Profile() {
                 </Grid>
             </Grid>
         </Container>
+        </UserContext.Provider>
     );  
 }

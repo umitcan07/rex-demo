@@ -1,34 +1,21 @@
-import { User } from '../types/user';
+import { faker } from '@faker-js/faker';
 
-export const userList: User[] = [
-    {
-        id: 1,
-        username: 'johndoe',
-        displayName: 'John Doe',
-        age: 30,
-        email: 'john@doe.com',
-        weight: 180,
-        height: 72,
-        profileImageUrl: 'https://images.pexels.com/photos/5378700/pexels-photo-5378700.jpeg',
-    },
-    {
-        id: 2,
-        username: 'janedoe',
-        displayName: 'Jane Doe',
-        age: 28,
-        email: 'jane@doe.rex',
-        weight: 120,
-        height: 64,
-        profileImageUrl: 'https://images.pexels.com/photos/4971135/pexels-photo-4971135.jpeg',
-    },
-    {
-        id: 3,
-        username: 'jimdoe',
-        displayName: 'Jim Doe',
-        age: 32,
-        email: 'jim@doe.com',
-        weight: 200,
-        height: 70,
-        profileImageUrl: 'https://images.pexels.com/photos/5082976/pexels-photo-5082976.jpeg',
-    }
-];
+import { User } from '../types';
+import { createRandomUser, createRandomWorkout } from '../utils';
+
+const numberOfUsers = 10;
+const baseMumberOfWorkoutsPerUser = 20;
+
+export const users: User[] = Array.from({ length: numberOfUsers }, (_, i) => createRandomUser(i + 1));
+
+// Iterate through each user and create a random number of workouts for each user
+
+users.forEach((user) => {
+    const numberOfWorkouts = faker.datatype.number({ min: 1, max: 2 * baseMumberOfWorkoutsPerUser });
+    user.workouts = Array.from({ length: numberOfWorkouts }, (_, i) => createRandomWorkout(i + 1));
+}
+);
+
+// export { users };
+
+

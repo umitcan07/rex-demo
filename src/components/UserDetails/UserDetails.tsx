@@ -16,10 +16,10 @@ export const UserDetails = (props: UserDetailsProp) => {
         </Badge>
            <Box sx={{display: "flex", flexDirection: "column", alignItems: 'center'}}>
                 <Typography variant="h6" component="span"  color="#131520">
-                    Umit Can Evleksiz
+                    {user.displayName}
                 </Typography>
                 <Typography variant='body1' component="span" color="#656B7B">
-                    @umitcanfit
+                    @{user.username}
                 </Typography>
             </Box>
             <Divider sx={{alignSelf: 'stretch'}} />

@@ -28,6 +28,8 @@
     }
   },
   "rules": {
+    /** Only single quotes **/
+    "quotes": ["error", "single", { "avoidEscape": true }],
     /** We live to remove this rule. */
     "@typescript-eslint/no-explicit-any": "off",
     /** We do too much of this with the singletons */
@@ -127,7 +129,7 @@
       }
     ],
     "react/jsx-curly-brace-presence": [
-      "error",
+      "warn",
       {
         "props": "never",
         "children": "never"

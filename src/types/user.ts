@@ -1,5 +1,5 @@
-import { Email } from "./email";
-import { Workout } from "./workout";
+import { Email } from './email';
+import { Workout } from './workout';
 
 export type User = {
     id: number;
