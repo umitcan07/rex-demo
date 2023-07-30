@@ -1,21 +1,19 @@
+'use client'
+
 import { LocalFireDepartment, MonitorHeart, Person } from '@mui/icons-material';
 import { Box, Button, Container, Grid, Paper, Typography } from '@mui/material';
 import * as React from 'react';
-import { useContext } from 'react';
 
 import { Feed } from '../src/components/Feed/Feed';
-import Example from '../src/components/Heatmap/Heatmap';
+import { Heatmap } from '../src/components/Heatmap/';
 import { UserDetails } from '../src/components/UserDetails/UserDetails';
-import { UserContext } from '../src/contexts/UserContext';
-import { Workout } from '../src/types';
-import { User } from '../src/types/user';
-
+import { users } from '../src/data';
+import { User, Workout  } from '../src/types';
 
 export default function Profile() {
-    const user: User = useContext(UserContext);
-    const workouts = user.workouts as Workout[];
+    const user: User = users[0];
+    const workouts: Workout[] = user.workouts;
     return (
-        <UserContext.Provider value={user}>
         <Container sx={{pt: 8}} maxWidth="md">
             <Grid container spacing={{xs: 3, md: 5}}>
                 <Grid item xs={12}>
@@ -37,14 +35,14 @@ export default function Profile() {
                                 Heatmap
                             </Typography>
                         </Box>
-                        <Example width={200} height={180} margin={{top: 0, bottom: 0, left: 0, right: 0}} />
+                        <Heatmap width={200} height={180} margin={{top: 0, bottom: 0, left: 0, right: 0}} />
                         <Box sx={{display: 'flex', flexDirection:'column', alignItems: 'stretch',  gap: 1, p: 2}}>
                             <Button href="./" variant="outlined">Detailed View</Button>
                         </Box>
                     </Paper>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <Paper elevation={2}    >
+                    <Paper elevation={2}>
                         <Box sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 1, p: 2, pb: 2}}>
                             <MonitorHeart />
                             <Typography variant="h6" component="h2">
@@ -59,6 +57,5 @@ export default function Profile() {
                 </Grid>
             </Grid>
         </Container>
-        </UserContext.Provider>
     );  
 }
