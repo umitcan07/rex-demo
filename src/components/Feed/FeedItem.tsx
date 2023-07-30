@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material';
+import moment from 'moment';
 
 import { Workout } from '../../types/workout';
 import { workoutTypeToColors } from '../../utils/workoutTypeToColors';
@@ -8,8 +9,7 @@ export type FeedItemProps = {
     workout: Workout;
 };
 
-export const FeedItem = (props: FeedItemProps) => {
-    const {workout} = props;
+export const FeedItem:React.FC<FeedItemProps> = ({workout}) => {
     const workoutTypeColors = workoutTypeToColors[workout.type];
     return (
         <Box sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 2, p: 1}}>
@@ -21,7 +21,7 @@ export const FeedItem = (props: FeedItemProps) => {
                     {workout.type}
                 </Typography>
                 <Typography variant="body2" color="#263238">
-                    {workout.caloriesBurned} cal - {workout.date.toLocaleDateString()} 
+                    {workout.caloriesBurned} cal - {moment(workout.date).format('MMM Do')} 
                 </Typography>
             </Box>
         </Box>

@@ -15,6 +15,7 @@ export const createRandomUser = (id: number): User => {
     const weight = faker.number.int({ min: 40, max: 120 });
     const height = faker.number.int({ min: 120, max: 220 });
     const profileImageUrl = faker.image.avatar();
+    const workouts: Workout[] = [];
 
     return {
         id,
@@ -24,7 +25,8 @@ export const createRandomUser = (id: number): User => {
         email,
         weight,
         height,
-        profileImageUrl
+        profileImageUrl,
+        workouts
     }
 
 }
@@ -33,7 +35,7 @@ export const createRandomWorkout = (id: number): Workout => {
     return {
         id: id,
         type: faker.helpers.arrayElement(['LEG', 'PRESS', 'CURL']),
-        date: faker.date.between('2023-07-01', '2023-08-31'),
+        date: faker.date.between('2023-06-01', '2023-07-30'),
         duration: faker.number.int({ min: 30, max: 60 }),
         caloriesBurned: faker.number.int({ min: 50, max: 300 }),
         intensity: faker.number.int({ min: 1, max: 10 }),

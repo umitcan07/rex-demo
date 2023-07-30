@@ -10,5 +10,5 @@ export type User = {
     weight: number;
     height: number;
     profileImageUrl?: string;
-    workouts?: Workout[];
+    workouts: Workout[];
 }

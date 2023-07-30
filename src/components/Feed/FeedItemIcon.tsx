@@ -8,7 +8,7 @@ type FeedItemIconProps = {
     workoutType: WorkoutType;
 };
 
-export const FeedItemIcon = (props: FeedItemIconProps) => {
+export const FeedItemIcon:React.FC<FeedItemIconProps> = (props) => {
     const { workoutType } = props;
     switch (workoutType) {
         case 'LEG':
