@@ -48,7 +48,7 @@ export const createRandomWorkout = (id: number): Workout => {
     return {
         id: id,
         type: faker.helpers.arrayElement(['LEG', 'PRESS', 'CURL']),
-        date: faker.date.recent({ days: 100 }),
+        date: faker.date.recent({ days: 80 }),
         duration: faker.number.int({ min: 5, max: 60 }),
         caloriesBurned: faker.number.int({ min: 30, max: 314 }),
         intensity: faker.number.int({ min: 1, max: 10 }),
