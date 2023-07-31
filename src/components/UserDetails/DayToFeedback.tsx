@@ -1,4 +1,4 @@
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import moment from 'moment';
 import React, { useMemo } from 'react';
 
@@ -10,7 +10,7 @@ export type DayToEmojiProps = {
 };
 
 
-export const DayToFeedback: React.FC<DayToEmojiProps> = ({daysWorked}) => {
+export const DayToFeedback: React.FC<DayToEmojiProps> = ({ daysWorked }) => {
 
     const todayAsNumber = moment().isoWeekday();
     const emoji = useMemo(() => {
@@ -68,7 +68,7 @@ export const DayToFeedback: React.FC<DayToEmojiProps> = ({daysWorked}) => {
             return null;
         case 6:
         case 7:
-            return ( <Box sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 1, p: 2}}> 
+            return ( <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 1, p: 2 }}> 
             {emoji} {feedback}
             </Box> )
         default:

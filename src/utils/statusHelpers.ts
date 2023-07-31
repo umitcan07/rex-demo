@@ -26,14 +26,18 @@ export const getWorkoutsOfTheWeek = (workouts: Workout[]): Workout[] => {
 }
 
 export const getWeeklyDaysWorkedOut = (workouts: Workout[]): number => {
-    return getWorkoutsOfTheWeek(workouts).length;
+    // Keep in mind that there might be multiple workouts per day.
+    const thisWeekWorkouts = getWorkoutsOfTheWeek(workouts);
+    const daysWorkedOut = thisWeekWorkouts.map(workout => moment(workout.date).isoWeekday());
+    const uniqueDaysWorkedOut = new Set(daysWorkedOut);
+    return uniqueDaysWorkedOut.size;
+
 }
 
 export const getWeeklyStreak = (workouts: Workout[]): WeeklyStreakString => {
     // Ex: '3/6' means this week we did 3 workouts out of 6 days as today is the 6th day of the week)
-    const thisWeekWorkouts = getWorkoutsOfTheWeek(workouts);
     const now = moment();
-    const accomplished = thisWeekWorkouts.length as Accomplished;
+    const accomplished = getWeeklyDaysWorkedOut(workouts) as Accomplished;
     const total = now.isoWeekday() as Total; // it's from 1 (Monday) to 7 (Sunday)
     return `${accomplished}/${total}`;
 }

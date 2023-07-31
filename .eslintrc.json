@@ -134,6 +134,7 @@
         "props": "never",
         "children": "never"
       }
-    ]
+    ],
+    "object-curly-spacing": ["warn", "always"]
   }
 }

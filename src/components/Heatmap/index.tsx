@@ -1,1 +1,1 @@
-export {Heatmap} from './Heatmap';
+export { Heatmap } from './Heatmap';
