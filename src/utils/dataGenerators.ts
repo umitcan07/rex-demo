@@ -5,9 +5,9 @@ import { poisson } from './poisson';
 import { sortByDate } from './sortByDate';
 
 const avgNumberOfWorkouts = 200; // For now it is based on 100 days
-const seedOffset = 61;
+const seedOffset = 45;
 
-export const numberOfUsersInDatabase = 5;
+export const numberOfUsersInDatabase = 50;
 
 export const createRandomUser = (id: number): User => {
 
