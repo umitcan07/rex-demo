@@ -2,6 +2,7 @@ import { faker } from '@faker-js/faker';
 
 import { Email, User, Workout } from '../types';
 import { poisson } from './poisson';
+import { sortByDate } from './sortByDate';
 
 const avgNumberOfWorkouts = 600; // For now it is based on 100 days
 const seedOffset = 32;
@@ -24,7 +25,7 @@ export const createRandomUser = (id: number): User => {
     const weight = faker.number.int({ min: 40, max: 120 });
     const height = faker.number.int({ min: 120, max: 220 });
     const profileImageUrl = faker.image.avatar();
-    const workouts: Workout[] = createRandomWorkouts(poisson(avgNumberOfWorkouts));
+    const workouts: Workout[] = sortByDate(createRandomWorkouts(poisson(avgNumberOfWorkouts))) as Workout[];
 
     return {
         id,

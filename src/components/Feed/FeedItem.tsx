@@ -21,7 +21,7 @@ export const FeedItem:React.FC<FeedItemProps> = ({ workout }) => {
                     {workout.type}
                 </Typography>
                 <Typography variant="body2" color="#263238">
-                    {workout.caloriesBurned} cal - {moment(workout.date).format('MMM Do')} 
+                    {workout.caloriesBurned} cal - {moment(workout.date).format('MMMM Do YYYY, h:mm:ss a')} 
                 </Typography>
             </Box>
         </Box>
