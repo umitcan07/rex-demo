@@ -7,7 +7,7 @@ import { sortByDate } from './sortByDate';
 const avgNumberOfWorkouts = 200; // For now it is based on 100 days
 const seedOffset = 61;
 
-export const numberOfUsersInDatabase = 30;
+export const numberOfUsersInDatabase = 5;
 
 export const createRandomUser = (id: number): User => {
 

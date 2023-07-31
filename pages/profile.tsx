@@ -60,7 +60,7 @@ export default function Profile() {
                 </Grid>
             </Grid>
             <Box position={{ md: 'static', xs: 'fixed' }} bottom={5} p={5} sx={{ width: '100%', display: 'flex', alignItems: 'center', flexDirection:'row', justifyContent: 'center' }}>
-                <Button onClick={() => setUserIdx(userIdx => userIdx + 1)} variant="contained" size='large'>Shuffle User</Button>
+                <Button onClick={() => setUserIdx(userIdx => (userIdx + 1) % users.length)} variant="contained" size='large'>Shuffle User</Button>
             </Box>
         </Container>
     );  
