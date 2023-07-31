@@ -27,29 +27,33 @@ export default function Profile() {
                         <UserDetails user={user} />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} md={6}>
-                    <Paper elevation={2}>
+                <Grid sx={{ height: 400 }} item xs={12} md={6}>
+                    <Paper sx={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'stretch' }} elevation={2}>
                         <Box display='flex' flexDirection="row" alignItems="center" gap={1} p={2}>
                             <LocalFireDepartment />
                             <Typography variant="h6" component="h2">
                                 Heatmap
                             </Typography>
                         </Box>
-                        <Heatmap width={200} height={180} margin={{ top: 0, bottom: 0, left: 0, right: 0 }} />
+                        <Box sx={{ flex: 1, overflow: 'auto' }} display='flex' flexDirection="column" alignItems="center" justifyContent="center">
+                            <Heatmap />
+                        </Box>
                         <Box sx={{ display: 'flex', flexDirection:'column', alignItems: 'stretch',  gap: 1, p: 2 }}>
                             <Button href="./" variant="outlined">Detailed View</Button>
                         </Box>
                     </Paper>
                 </Grid>
-                <Grid item xs={12} md={6}>
-                    <Paper elevation={2}>
+                <Grid sx={{ height: 400 }} item xs={12} md={6}>
+                    <Paper sx={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'stretch' }} elevation={2}>
                         <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 1, p: 2, pb: 2 }}>
                             <MonitorHeart />
                             <Typography variant="h6" component="h2">
                                 Workout Feed
                             </Typography>
                         </Box>
-                        <Feed workouts={workouts}/>
+                        <Box sx={{ flex: 1, overflow: 'auto' }}>
+                            <Feed workouts={workouts}/>
+                        </Box>
                         <Box sx={{ display: 'flex', flexDirection:'column', alignItems: 'stretch',  gap: 1, p: 2 }}>
                             <Button href='./' variant="outlined">All Activity</Button>
                         </Box>

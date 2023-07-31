@@ -11,7 +11,7 @@ type FeedProps = {
 export const Feed:React.FC<FeedProps> = ({ workouts }) => {
     const workoutsThisWeek = getWorkoutsOfTheWeek(workouts);
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', p: 2, maxHeight: 210, overflow: 'auto', gap: 2 }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', p: 2, overflow: 'auto', gap: 2, height: 'auto' }}>
             {workoutsThisWeek.length > 0 && workoutsThisWeek.map((workout, index) => {
                 // Return for only the workouts that have a date of the current week
                 return (

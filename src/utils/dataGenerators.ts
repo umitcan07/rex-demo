@@ -3,8 +3,8 @@ import { faker } from '@faker-js/faker';
 import { Email, User, Workout } from '../types';
 import { poisson } from './poisson';
 
-const avgNumberOfWorkouts = 60; // For now it is based on 100 days
-const seedOffset = 31;
+const avgNumberOfWorkouts = 600; // For now it is based on 100 days
+const seedOffset = 32;
 
 export const numberOfUsersInDatabase = 20;
 
