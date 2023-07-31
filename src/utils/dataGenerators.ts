@@ -4,10 +4,10 @@ import { Email, User, Workout } from '../types';
 import { poisson } from './poisson';
 import { sortByDate } from './sortByDate';
 
-const avgNumberOfWorkouts = 600; // For now it is based on 100 days
-const seedOffset = 32;
+const avgNumberOfWorkouts = 200; // For now it is based on 100 days
+const seedOffset = 61;
 
-export const numberOfUsersInDatabase = 20;
+export const numberOfUsersInDatabase = 30;
 
 export const createRandomUser = (id: number): User => {
 
@@ -43,7 +43,7 @@ export const createRandomUser = (id: number): User => {
 
 export const createRandomWorkout = (id: number): Workout => {
 
-    faker.seed(id + seedOffset);
+    // faker.seed(id + seedOffset);
 
     return {
         id: id,
