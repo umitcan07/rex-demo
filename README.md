@@ -1,44 +1,25 @@
 # Material UI - Next.js example in TypeScript
 
-## How to use
+## How to view the project
 
-Download the example [or clone the repo](https://github.com/mui/material-ui):
+[Clone the repository](https://github.com/umitcan07/rex-demo.git)
 
 <!-- #default-branch-switch -->
-
-```bash
-curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/material-next-ts
-cd material-next-ts
-```
 
 Install it and run:
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
-or:
+## The purpose
 
-<!-- #default-branch-switch -->
+This project is a demo application to showcase a profile page for rex.fit app, requirements being described as
+- A new Next.js project set up with TypeScript, Material-UI, and visx.
+- A static layout of the user profile page.
+- Three React components for the user information, heatmap, and workout feed.
 
-[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/master/examples/material-next-ts)
+## Design
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui/material-ui/tree/master/examples/material-next-ts)
-
-## The idea behind the example
-
-The project uses [Next.js](https://github.com/vercel/next.js), which is a framework for server-rendered React apps.
-It includes `@mui/material` and its peer dependencies, including [Emotion](https://emotion.sh/docs/introduction), the default style engine in Material UI v5. If you prefer, you can [use styled-components instead](https://mui.com/material-ui/guides/interoperability/#styled-components).
-
-## The link component
-
-The [example folder](https://github.com/mui/material-ui/tree/HEAD/examples/material-next-ts) provides an adapter for the use of [Next.js's Link component](https://nextjs.org/docs/api-reference/next/link) with MUI.
-More information [in the documentation](https://mui.com/material-ui/guides/routing/#next-js).
-
-## What's next?
-
-<!-- #default-branch-switch -->
-
-You now have a working example project.
-You can head back to the documentation and continue by browsing the [templates](https://mui.com/material-ui/getting-started/templates/) section.
+LoFi design can be found at [Figma](https://www.figma.com/file/lmuS9OLlVmbObd7IWJSLAt/Rex-x-%C3%9Cmit-Can?type=design&node-id=3-30&mode=design&t=DxJSWEQkmR1NRFB1-4)https://www.figma.com/file/lmuS9OLlVmbObd7IWJSLAt/Rex-x-%C3%9Cmit-Can?type=design&node-id=3-30&mode=design&t=DxJSWEQkmR1NRFB1-4: 
