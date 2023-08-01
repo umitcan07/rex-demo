@@ -4,8 +4,8 @@ import { Email, User, Workout } from '../types';
 import { poisson } from './poisson';
 import { sortByDate } from './sortByDate';
 
-const avgNumberOfWorkouts = 200; // For now it is based on 100 days
-const seedOffset = 45;
+const avgNumberOfWorkouts = 60; // For now it is based on 100 days
+const seedOffset = 41;
 
 export const numberOfUsersInDatabase = 50;
 
