@@ -24,6 +24,9 @@ export default function MyApp(props: MyAppProps) {
         <title>Rex Demo</title>
         <meta name="description" content="Rex Demo" />
         <meta name="theme-color" content={theme.palette.background.default} />
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.webmanifest" /> 
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
