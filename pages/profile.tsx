@@ -34,7 +34,7 @@ export default function Profile() {
                                 Heatmap
                             </Typography>
                         </Box>
-                        <Box sx={{ flex: 1, overflow: 'auto', px: 4 }} display='flex' flexDirection="column" alignItems="center" justifyContent="center">
+                        <Box sx={{ flex: 1, overflow: 'auto', px: 4, py: 1.5 }} display='flex' flexDirection="column" alignItems="center" justifyContent="center">
                             <Heatmap workouts={users[userIdx].workouts} events={true} />
                         </Box>
                         <Box sx={{ display: 'flex', flexDirection:'column', alignItems: 'stretch',  gap: 1, p: 2 }}>

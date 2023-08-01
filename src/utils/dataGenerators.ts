@@ -4,8 +4,8 @@ import { Email, User, Workout } from '../types';
 import { poisson } from './poisson';
 import { sortByDate } from './sortByDate';
 
-const avgNumberOfWorkouts = 60; // For now it is based on 100 days
-const seedOffset = 41;
+const avgNumberOfWorkouts = 120; // For now it is based on 120 days
+const seedOffset = 18;
 
 export const numberOfUsersInDatabase = 50;
 
@@ -48,7 +48,7 @@ export const createRandomWorkout = (id: number): Workout => {
     return {
         id: id,
         type: faker.helpers.arrayElement(['LEG', 'PRESS', 'CURL']),
-        date: faker.date.recent({ days: 80 }),
+        date: faker.date.recent({ days: 120 }),
         duration: faker.number.int({ min: 5, max: 60 }),
         caloriesBurned: faker.number.int({ min: 30, max: 314 }),
         intensity: faker.number.int({ min: 1, max: 10 }),

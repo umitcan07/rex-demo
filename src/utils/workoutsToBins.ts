@@ -6,7 +6,7 @@ import { getWeekDifference } from './heatmapHelpers';
 
 
 
-export const numberOfWeeksToDisplay = 13;
+export const numberOfWeeksToDisplay = 18;
 
 export const workoutsToBins = (workouts: Workout[]): Bins[] => {
 
@@ -29,6 +29,7 @@ export const workoutsToBins = (workouts: Workout[]): Bins[] => {
     workouts.forEach(workout => {
         const weekDifference = getWeekDifference(workout.date);
         const dayOfWeek = moment(workout.date).isoWeekday() - 1;
+        if (weekDifference < 0 || weekDifference >= numberOfWeeksToDisplay) return;
         bins[weekDifference].bins[dayOfWeek].count += workout.caloriesBurned;
         return bins;
     }
