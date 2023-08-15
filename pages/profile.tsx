@@ -13,7 +13,7 @@ import { users } from '../src/data/users';
 export default function Profile() {
     const [userIdx, setUserIdx] = useState(0);
     return (
-        <Container sx={{ py: { xs: 4, md: 6, lg: 8 } }} maxWidth="md">
+        <Container sx={{ py: { xs: 4, md: 6, lg: 8 }, pb: { xs: 15, md: 8 } }} maxWidth="md">
             <Grid container spacing={{ xs: 3, md: 5 }}>
                 <Grid item xs={12}>
                     <Paper elevation={1} >

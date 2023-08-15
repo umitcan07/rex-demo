@@ -65,12 +65,14 @@ export const DayToFeedback: React.FC<DayToEmojiProps> = ({ daysWorked }) => {
         case 3:
         case 4:
         case 5:
-            return null;
+            // return null;
         case 6:
         case 7:
-            return ( <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 1, p: 2 }}> 
-            {emoji} {feedback}
-            </Box> )
+            return (
+                <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 1, p: 2 }}> 
+                    {emoji} {feedback}
+                </Box> 
+            )
         default:
             return null;
     }

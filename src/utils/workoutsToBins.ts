@@ -2,11 +2,11 @@ import { Bins } from '@visx/mock-data/lib/generators/genBins';
 import moment from 'moment';
 
 import { Workout } from '../types';
-import { getWeekDifference } from './heatmapHelpers';
+import { getWeekDifference } from './';
 
 
 
-export const numberOfWeeksToDisplay = 18;
+export const numberOfWeeksToDisplay = 12;
 
 export const workoutsToBins = (workouts: Workout[]): Bins[] => {
 

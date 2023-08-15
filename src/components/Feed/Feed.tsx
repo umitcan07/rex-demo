@@ -26,7 +26,7 @@ const FeedEmptyState: React.FC = () => {
 export const Feed:React.FC<FeedProps> = ({ workouts }) => {
     const workoutsThisWeek = getWorkoutsOfTheWeek(workouts);
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', p: 2, overflow: 'auto', gap: 2, height: '100%   ', flex: 1 }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', p: 2, overflow: 'auto', gap: 2, height: '100%', flex: 1 }}>
             {workoutsThisWeek.length > 0 ? workoutsThisWeek.map((workout, index) => {
                 return (
                     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }} key={index}>

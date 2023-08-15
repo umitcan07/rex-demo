@@ -41,9 +41,11 @@ export const Heatmap = ({ workouts, events=false }: HeatmapProps) => {
 
   // scales
   const xScale = scaleLinear<number>({
+    range: [xMax, 0],
     domain: [0, generatedBins.length],
   });
   const yScale = scaleLinear<number>({
+    range: [yMax, 0],
     domain: [0, bucketSizeMax],
   });
   const rectColorScale = scaleLinear<string>({
@@ -54,9 +56,6 @@ export const Heatmap = ({ workouts, events=false }: HeatmapProps) => {
     range: [0.5, 1],
     domain: [0, colorMax],
   });
-
-  xScale.range([xMax, 0]);
-  yScale.range([yMax, 0]);
 
   return (
     <svg width="100%" height='100%' viewBox={`0 0 ${xMax} ${yMax}`}>
